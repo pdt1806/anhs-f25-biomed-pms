@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Biomed PMS</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- load font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style/styles.css" />
+    <!-- this css is for this webpage of the website -->
+    <link rel="stylesheet" type="text/css" href="style/index.css" />
+    <!-- load javascript -->
+    <script src="script/index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Biomed PMS</h1>
+    </header>
+    <div class="wrapper">
+      <!-- is this a navbar to navigate to different pages, 
+       or just a sidebar of functions? -->
+      <nav id="main-nav">
+        <div>Reprint Admission Form</div>
+        <div>Discharge Inpatient</div>
+        <div>Transfer / Bed Exchange</div>
+        <div>Update Patient Information</div>
+        <div>Print Wristband</div>
+        <div>Insurance Verification</div>
+        <div>Admission Checklist</div>
+        <div>Financial Clearance</div>
+        <div>Emergency Admission</div>
+        <div>Outpatient Registration</div>
+      </nav>
+      <!-- nav should be next to main -->
+      <main>
+        <section id="patient-search-box" style="margin-bottom: 1em">
+          <h2 style="margin-bottom: 0.5em">Patient Information</h2>
+          <form id="patient-search-form">
+            <div class="label-input">
+              <label for="patient-last-name">Last Name</label>
+              <input type="text" id="patient-last-name-input" name="patient-last-name" required />
+            </div>
+            <div class="label-input">
+              <label for="patient-first-name">First Name</label>
+              <input type="text" id="patient-first-name-input" name="patient-first-name" required />
+            </div>
+            <button type="submit" id="search-button">Search Patient</button>
+            <button type="button" id="clear-button">Clear Results</button>
+            <button type="button" id="print-stickers-button">Print Stickers</button>
+            <button type="button" id="face-sheet-button">Face Sheet</button>
+          </form>
+        </section>
+        <section id="search-results-section">
+          <table id="patient-results-table">
+            <!-- these are added in by the script later -->
+            <!-- <thead>
+            <tr>
+              <th>Patient ID</th>
+              <th>Last Name</th>
+              <th>First Name</th>
+              <th>Date of Birth</th>
+            </tr>
+          </thead> -->
+            <!-- <tbody id="patient-results-body">
+                <tr>
+                    <td>${id}</td>
+                    <td>${lastName}</td>
+                    <td>${firstName}</td>
+                    <td>${date}</td>
+                </tr>
+            Patient results will be populated here
+          </tbody> -->
+          </table>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

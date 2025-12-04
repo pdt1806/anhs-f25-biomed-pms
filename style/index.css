@@ -1,0 +1,67 @@
+#patient-search-box {
+  width: 100%;
+  padding: 1em;
+  background-color: #d4eaf8;
+  border-radius: 0.5em;
+}
+
+#patient-search-form {
+  display: flex;
+  gap: 1em;
+}
+
+#patient-search-form button {
+  padding: 0em 1em;
+  background: #fff;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+#patient-search-form #search-button {
+  background-color: #396db5;
+  border: none;
+  color: white;
+  &:hover {
+    background-color: #2c5490;
+  }
+}
+
+#patient-search-form #clear-button {
+  background-color: #d32f2fff;
+  border: none;
+  color: white;
+  &:hover {
+    background-color: #eb4343ff;
+  }
+}
+
+#patient-results-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#patient-results-table th,
+#patient-results-table td {
+  padding: 0.5em;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#patient-results-table th {
+  width: 25%;
+}
+
+#patient-results-table thead {
+  background-color: #2c5490;
+  color: white;
+
+  /* do this if you want the table header to stay visible on scroll */
+  /* position: sticky;
+  top: 0; */
+}
+
+#patient-results-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
