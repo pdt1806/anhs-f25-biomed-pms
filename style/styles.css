@@ -39,7 +39,7 @@ header h1 {
   padding: 0;
 }
 
-#main-nav div {
+#main-nav a {
   user-select: none;
   padding: 1em;
   color: white;

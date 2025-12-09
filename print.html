@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Print Page</title>
+  </head>
+  <body>
+    <h1>Print Page</h1>
+    <p>This is the print page.</p>
+    <hr />
+    <p id="id-box"></p>
+    <p id="name-box"></p>
+    <p id="date-box"></p>
+  </body>
+  <script>
+    // Get query parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get("id");
+    const firstName = urlParams.get("firstName");
+    const lastName = urlParams.get("lastName");
+    const dateOfBirth = urlParams.get("dateOfBirth");
+
+    // Populate the boxes with the data
+    document.getElementById("id-box").textContent = `Patient ID: ${id}`;
+    document.getElementById("name-box").textContent = `Name: ${firstName} ${lastName}`;
+    document.getElementById("date-box").textContent = `Date of Birth: ${dateOfBirth}`;
+
+    window.onafterprint = () => {
+      window.close();
+    };
+
+    window.print(); // Trigger the print dialog
+  </script>
+</html>

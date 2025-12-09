@@ -16,25 +16,15 @@
     <link rel="stylesheet" type="text/css" href="style/index.css" />
     <!-- load javascript -->
     <script src="script/index.js" defer></script>
+    <script src="script/navbar.js" defer></script>
   </head>
   <body>
     <header>
       <h1>Biomed PMS</h1>
     </header>
     <div class="wrapper">
-      <!-- is this a navbar to navigate to different pages, 
-       or just a sidebar of functions? -->
       <nav id="main-nav">
-        <div>Reprint Admission Form</div>
-        <div>Discharge Inpatient</div>
-        <div>Transfer / Bed Exchange</div>
-        <div>Update Patient Information</div>
-        <div>Print Wristband</div>
-        <div>Insurance Verification</div>
-        <div>Admission Checklist</div>
-        <div>Financial Clearance</div>
-        <div>Emergency Admission</div>
-        <div>Outpatient Registration</div>
+        <!-- to be filled in by navbar.js -->
       </nav>
       <!-- nav should be next to main -->
       <main>
@@ -56,28 +46,10 @@
           </form>
         </section>
         <section id="search-results-section">
-          <table id="patient-results-table">
-            <!-- these are added in by the script later -->
-            <!-- <thead>
-            <tr>
-              <th>Patient ID</th>
-              <th>Last Name</th>
-              <th>First Name</th>
-              <th>Date of Birth</th>
-            </tr>
-          </thead> -->
-            <!-- <tbody id="patient-results-body">
-                <tr>
-                    <td>${id}</td>
-                    <td>${lastName}</td>
-                    <td>${firstName}</td>
-                    <td>${date}</td>
-                </tr>
-            Patient results will be populated here
-          </tbody> -->
-          </table>
+          <table id="patient-results-table"></table>
         </section>
       </main>
     </div>
   </body>
 </html>
+<!-- github repo: https://github.com/pdt1806/anhs-f25-biomed-pms -->

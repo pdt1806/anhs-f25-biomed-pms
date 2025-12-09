@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Biomed PMS</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- load font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style/styles.css" />
+    <!-- this css is for this webpage of the website -->
+    <link rel="stylesheet" type="text/css" href="style/discharge.css" />
+    <!-- load javascript -->
+    <script src="script/discharge.js" defer></script>
+    <script src="script/navbar.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Biomed PMS</h1>
+    </header>
+    <div class="wrapper">
+      <nav id="main-nav">
+        <!-- to be filled in by navbar.js -->
+      </nav>
+      <!-- nav should be next to main -->
+      <main>
+        <h2>Discharge Impatient</h2>
+        <section id="patient-information">
+          <img src="/public/img/frieren.png" alt="Patient Photo" id="patient-photo" />
+          <form id="discharge-form">
+            <div>
+              <p class="info-label">Patient ID</p>
+              <p class="info-text-box" id="patient-id-text-box"></p>
+              <p class="info-label">Name</p>
+              <p class="info-text-box" id="patient-name-text-box"></p>
+              <p class="info-label">Date of Birth</p>
+              <p class="info-text-box" id="patient-dob-text-box"></p>
+            </div>
+            <div class="edit-wrapper">
+              <div>
+                <label class="info-label" for="discharge-time-input">Discharge Time</label>
+                <input type="datetime-local" id="discharge-time-input" name="discharge-time" required />
+              </div>
+              <div>
+                <p class="info-label">Discharge Reason</p>
+                <select id="discharge-reason-select" name="discharge-reason" required>
+                  <option value="standard">Standard</option>
+                  <option value="elopement">Elopement</option>
+                  <option value="against-medical-advice">Against Medical Advice</option>
+                  <option value="transfer">Transfer</option>
+                  <option value="deceased">Deceased</option>
+                </select>
+              </div>
+              <div>
+                <p class="info-label">Discharge Location</p>
+                <input
+                  type="text"
+                  id="discharge-location-input"
+                  placeholder="Required"
+                  name="discharge-location"
+                  required
+                />
+              </div>
+              <div>
+                <p class="info-label">Notes</p>
+                <textarea id="discharge-notes-textarea" placeholder="Optional" name="discharge-notes"></textarea>
+              </div>
+            </div>
+            <div class="button-wrapper">
+              <button type="submit" id="confirm-discharge-button">Confirm Discharge</button>
+              <p class="discharge-disclaimer">
+                By confirming discharge, you acknowledge that all information entered is accurate and complete. Once
+                patient is discharged, information can not be changed.
+              </p>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
+<!-- github repo: https://github.com/pdt1806/anhs-f25-biomed-pms -->
